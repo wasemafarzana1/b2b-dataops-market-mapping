@@ -19,3 +19,57 @@ Unlike generic scraping pools, this dataset enforces a strict constraint ($N=100
 | **🇺🇸 United States (US)** | **54** | 46 | 7 | 1 | Silicon Valley Sourcing Architects, Work-Tech Founders |
 | **🇮🇳 India (IN)** | **46** | 39 | 5 | 2 | Subcontinent TA Directors, Offshore Delivery Hub Leads |
 | **✨ Master Dataset Total** | **100** | **85** | **12** | **3** | **Turnkey Enterprise Outbound Asset** |
+
+[Raw Input Ingestion] ➔ [Entity Resolution & Deduplication] ➔ [Schema Standardization] ➔ [Deliverability QA]
+
+---
+
+## 📐 Data Pipeline Visual Flow
+This repository uses native Mermaid.js to chart the logical boundaries governing records before they are committed to the final dataset layer:
+
+```mermaid
+graph TD
+    A[Raw Sourcing Input: OSINT] --> B{Platform Evaluator}
+    
+    B -->|LinkedIn| C[Check Active Content Loop <14 Days]
+    B -->|Instagram| D[Check Content Utility & Relevance]
+    B -->|Facebook| E[Verify Peer-to-Peer Professional Activity]
+    
+    C --> F[Isolate Entity Unique Digital Identity]
+    D --> F
+    E --> F
+    
+    F --> G{Cross-Platform Multi-Node Entity Check}
+    G -->|Duplicate Profile Found| H[Execute Dominant Footprint Assignment Rule]
+    G -->|Unique Profile Cleared| I[Pass to Schema Normalization Engine]
+    
+    H --> I
+    
+    I --> J[Apply Whitespace Trimming & String Normalization]
+    J --> K[Execute RFC 5322 Email Syntax Audit]
+    K --> L[Validate Target MX Records & Domain Health]
+    
+    L --> M[Ingest to Clean Master Database Array: N=100]
+    
+    style A fill:#f9f,stroke:#333,stroke-width:2px
+    style M fill:#bbf,stroke:#333,stroke-width:4px
+📂 Repository Blueprint
+/protocols: Complete operational logic detailing how mutations and anomalies are handled.
+
+01_discovery_sourcing.md: Regional parameters and domain boundary parameters.
+
+02_entity_resolution.md: Cross-platform de-duplication rules and profile linkage overrides.
+
+03_hygiene_validation.md: Text case normalization matrices and domain risk insulation guidelines.
+
+/templates: Standardized programmatic infrastructure models.
+
+schema_blueprint.json: Standard JSON schema governing record verification.
+
+target_icp_matrix.csv: Structural blank seed file for deployment cloning.
+
+📈 Engineering Integrity & Commercial Value
+By replacing unverified automation with a strict, human-in-the-loop data pipeline, this protocol converts raw web data into a reliable, enterprise-ready marketing asset. It guarantees structural consistency, completely eliminates multi-channel message collision, and preserves domain health by enforcing an aggressive syntax and validation layer prior to database compilation.
+
+
+---
