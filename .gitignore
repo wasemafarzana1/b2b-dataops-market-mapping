@@ -212,6 +212,33 @@ tempCodeRunnerFile.py
 # Marimo
 marimo/_static/
 marimo/_lsp/
+# ==========================================
+# DataOps & Client Confidentiality Guardrails
+# ==========================================
+
+# Block all raw data drops, lead lists, and extractions
+*.csv
+*.tsv
+*.xlsx
+*.ods
+
+# FORCE exception to allow your public structural templates to be committed
+!templates/target_icp_matrix.xlsx
+!templates/target_icp_matrix.csv
+
+# Ignore Microsoft Office temporary/lock files (prevents corrupting commits when editing Excel)
+~$*.xlsx
+~$*.xls
+.Xil/
+
+# Local configuration and environment variables (API keys, DB credentials)
+.env
+.env.local
+config.ini
+
+# OS specific clutter
+.DS_Store
+Thumbs.db
 __marimo__/
 
 # Streamlit
