@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "B2B_HR_Tech_Market_Map_Schema",
+  "description": "Enforces validation constraints for the US-India Talent Acquisition target mapping index.",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["Region", "Platform", "Name", "Profile Link", "Public Email", "Category"],
+    "additionalProperties": false,
+    "properties": {
+      "Region": {
+        "type": "string",
+        "enum": ["US", "IN"]
+      },
+      "Platform": {
+        "type": "string",
+        "enum": ["LinkedIn", "Instagram", "Facebook"]
+      },
+      "Name": {
+        "type": "string",
+        "minLength": 2,
+        "maxLength": 100
+      },
+      "Profile Link": {
+        "type": "string",
+        "format": "uri",
+        "pattern": "^https:\\/\\/(www\\.)?(linkedin|instagram|facebook)\\.com\\/.*"
+      },
+      "Public Email": {
+        "type": "string",
+        "description": "RFC 5322 business email vector or 'Unavailable' marker."
+      },
+      "Category": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  }
+}
