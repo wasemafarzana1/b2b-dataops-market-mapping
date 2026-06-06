@@ -3,19 +3,19 @@ Enterprise-grade pipeline framework for high-signal B2B target ingestion, cross-
 # Cross-Platform B2B Entity Resolution & Market Mapping Protocol
 
 ## 🌐 Abstract
-This repository documents a reproducible Data Operations (DataOps) framework designed to isolate, validate, and structure high-signal B2B nodes within specialized market verticals. Traditional automated scrapers consistently fail at cross-platform contextualization, resulting in high duplicate rates, fragmented profiles, and deteriorated domain sender reputations during outbound execution. 
+This repository documents a reproducible Data Operations (DataOps) framework designed to isolate, validate, and structure high-signal B2B nodes within the Talent Acquisition (TA) and HR Tech infrastructure sectors. Traditional automated scrapers treat cross-platform profiles as fragmented, separate records, leading to database inflation, duplicate multi-channel outbound outreach, and damaged domain sender reputations.
 
-This protocol solves these structural pain points through deterministic lookup pipelines, rigorous cross-platform entity resolution, and strict data-type standardization. 
-
-The baseline execution modeled below outlines the architecture used to construct a high-density, zero-duplicate index of **exactly 100 unique B2B operators and community nodes** within the HR Tech, Sourcing, and Talent Acquisition Automation sectors.
+This protocol addresses these limitations by establishing a deterministic identity resolution pipeline across a targeted cross-platform landscape, creating a clean, zero-duplicate index of **exactly 100 verified industry nodes** across the United States and India.
 
 ---
 
-## 🛠️ System Architecture & Database Matrix
-The target framework enforces an absolute boundary condition ($N=100$ unique records) across a cross-platform landscape, segmented symmetrically by regional market utility and primary channel leverage.
+## 🛠️ System Data Architecture
+Unlike generic scraping pools, this dataset enforces a strict constraint ($N=100$ unique records). The architectural distribution reflects an empirical, high-signal optimization strategy: LinkedIn serves as the baseline programmatic anchor for enterprise B2B validation, while Instagram and Facebook are selectively leveraged to capture high-engagement niche community hubs.
 
-| Target Cohort | Volume | LinkedIn | Instagram (>50k) | Facebook | Operational Persona |
+### Normalized Ingestion Matrix ($N=100$)
+
+| Regional Cohort | Total Nodes | LinkedIn (Core Anchor) | Instagram (Community) | Facebook (Niche Hubs) | Primary Operational Target |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **🌐 US Market Index** | **50** | 20 | 15 | 15 | HR Tech Analysts, Work-Tech Founders |
-| **🇮🇳 India-Focused Index** | **50** | 30 | 12 | 8 | Sub-Continent TA Directors, Regional Staffing Hubs |
-| **✨ Combined Master Dataset** | **100** | **50** | **27** | **23** | **Turnkey Outbound Target Asset** |
+| **🇺🇸 United States (US)** | **54** | 46 | 7 | 1 | Silicon Valley Sourcing Architects, Work-Tech Founders |
+| **🇮🇳 India (IN)** | **46** | 39 | 5 | 2 | Subcontinent TA Directors, Offshore Delivery Hub Leads |
+| **✨ Master Dataset Total** | **100** | **85** | **12** | **3** | **Turnkey Enterprise Outbound Asset** |
